@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Dagbok 2025</title>
+   </head>
+   <body>
+
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <span class="nav__logo-circle">S+S</span>
+               <span class="nav__logo-name">Dagbok 2025.</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <span class="nav__title">Menu</span>
+
+               <h3 class="nav__name">Samuel</h3>
+
+               <!-- Close Button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__buttons">
+
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+               <!-- Toggle Button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== Find date ====================-->
+         <section class="contact section" id="contact">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>Dagbok.</span>
+                  </h2>
+                  <p>Välj ett datum… och se vilka hemligheter dagboken avslöjar.</p>
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     Välj Datum
+                  </h2>
+
+                  <form class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <label for="date" class="contact__label">Välj ett datum</label>
+                           <select name="user_date" class="contact__input" id="date" required>
+                              <option value="" disabled selected>Välj ett datum</option>
+                              <option value="17April">17:e April 2025</option>
+                              <option value="18April">18:e April 2025</option>
+                              <!-- Lägg till fler datum här om du vill -->
+                           </select>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== 17:e april ====================-->
+         <section class="about section" id="17April">
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  <span>17:e April</span>
+               </h2>
+               <div class="about__perfil">
+                  <div class="about__image">
+                     <img src="assets/img/1.jpg" alt="image" class="about__img">
+                     <img src="assets/img/2.jpg" alt="image" class="about__img">
+                     <img src="assets/img/3.jpg" alt="image" class="about__img">
+                     <div class="about__shadow">
+                        <div class="geometric-box"></div>
+                        <img src="assets/img/random-lines.svg" alt="image" class="about__line">
+                        <div class="about__box"></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     <b>Hurra! Första inlägget i den nya dagboken!</b> Nu har det gått ca 1v sen Shaymaa flyttade ut för 1 månad :( . <b>Jag tänkte på henne extra mycket och saknar henne verkligen något enormt</b>, så jag skapade denna idé för oss! :D
+                     Så när hon kommer tillbaka kan hon gå hit och se vad jag gjort om dagarna!
+                  </p>
+                  <p class="about__description">
+                     Denna vecka har jag verkligen fått väldigt mycket gjort. Känns som jag äntligen kan vända mitt liv i rätt riktning! Jag har sökt en massa jobb - gjort ett test och fått ett avslag. Jag har omorganiserat badrumsskåpet, tv-bänken och nästan alla skåp i köket. Samt gjort om helt i sovrummet.
+                     (ps har tagit massa bilder för att visa henne vad jag gjort)
+                  </p>
+                  <p class="about__description">
+                     Jag har också beställt hem massa god mat från Ica, lagat kanonmat hela veckan! Shaymaa skulle vara stolt över mig, massa grönsaker, frukt och mat från grunden. Utöver hemmasysslor så har jag träffat mamma, mormor, pappa och Alex vilket var superroligt!
+                     Jag har också sorterat alla bilder i mobilen, blev rörd och började gråta när jag såg alla fina bilder & minnen som jag och Shaymaa skaffat.
+                  </p>
+                  <p class="about__description">
+                     Men det var nog allt för 1 dags inlägg, ses imorgon igen!
+                  </p>
+
+               </div>
+            </div>
+         </section>
+
+         <!--==================== 18:e april ====================-->
+         <section class="about section" id="18April">
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  <span>18:e April</span>
+               </h2>
+               <div class="about__perfil">
+                  <div class="about__image">
+
+                     <div class="about__shadow">
+                        <div class="geometric-box"></div>
+                        <img src="assets/img/random-lines.svg" alt="image" class="about__line">
+                        <div class="about__box"></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     tbc
+                  </p>
+
+
+               </div>
+            </div>
+         </section>
+
+         <!-- JavaScript to scroll on date selection -->
+         <script>
+            document.getElementById('date').addEventListener('change', function () {
+               const sectionId = this.value;
+               const section = document.getElementById(sectionId);
+               if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+               }
+            });
+         </script>
+
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+      
+      <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
