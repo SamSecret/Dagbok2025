@@ -649,13 +649,16 @@
 
          <!-- JavaScript to scroll on date selection -->
          <script>
-            const NAMESPACE = "samsecret";
-            const COUNTER = "Dagbok2025";
-            const API_URL = `https://api.counterapi.dev/v1/${NAMESPACE}/${COUNTER}/up`;
+            const proxy = "https://corsproxy.io/";
+            const targetURL = "https://api.counterapi.dev/v1/samsecret/Dagbok2025/up";
+            const API_URL = proxy + targetURL;
+
+            console.log(API_URL)
 
             fetch(API_URL)
                     .then(response => response.json())
                     .then(data => {
+                       console.log(data);
                        if (data && data.count !== undefined) {
                           document.getElementById("visit-count").innerText = data.count;
                        } else {
@@ -668,6 +671,7 @@
                        document.getElementById("visit-count").innerText = "fel";
                     });
          </script>
+
 
          <script>
             document.getElementById('date').addEventListener('change', function () {
