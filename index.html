@@ -649,6 +649,27 @@
 
          <!-- JavaScript to scroll on date selection -->
          <script>
+            const NAMESPACE = "samsecret";
+            const COUNTER = "Dagbok2025";
+            const API_URL = `https://api.counterapi.dev/v1/${NAMESPACE}/${COUNTER}/up`;
+
+            fetch(API_URL)
+                    .then(response => response.json())
+                    .then(data => {
+                       if (data && data.count !== undefined) {
+                          document.getElementById("visit-count").innerText = data.count;
+                       } else {
+                          console.warn("API svarade utan en räkning:", data);
+                          document.getElementById("visit-count").innerText = "okänd";
+                       }
+                    })
+                    .catch(error => {
+                       console.error("Kunde inte hämta besöksräknaren:", error);
+                       document.getElementById("visit-count").innerText = "fel";
+                    });
+         </script>
+
+         <script>
             document.getElementById('date').addEventListener('change', function () {
                const sectionId = this.value;
                const section = document.getElementById(sectionId);
@@ -656,6 +677,13 @@
                   section.scrollIntoView({ behavior: 'smooth' });
                }
             });
+         </script>
+
+         <script>
+            const referrer = document.referrer;
+            console.log("Referrer:", referrer);
+            // You can also show it on the page if you want:
+            document.getElementById("referrer").innerText = referrer || "Direct visit";
          </script>
 
       </main>
